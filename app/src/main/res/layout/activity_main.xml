@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/common_linearlayour_marginbotton"
+        android:layout_marginEnd="@dimen/common_linearlayour_marginend"
+        android:layout_marginStart="@dimen/common_linearlayour_marginstart"
+        android:layout_marginTop="@dimen/ll_margin_top"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/ll_to_do"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_to_do"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/to_do_marigin_start"
+                android:height="@dimen/textview_height"
+                android:text="To DO" />
+
+            <LinearLayout
+                android:id="@+id/ll_to_do_inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <!--Keep height wrap content to show all items in recycler view.
+                          This will properly align the 'Add new' row below recycler view -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_todo_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_in_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/to_do_marigin_start"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/to_do_marigin_start"
+                android:height="@dimen/textview_height"
+                android:text="In Progress" />
+
+            <LinearLayout
+                android:id="@+id/ll_in_progress_inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <!--Keep height wrap content to show all items in recycler view.
+                                           This will properly align the 'Add new' row below recycler view -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_inprogress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_done"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/to_do_marigin_start"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/to_do_marigin_start"
+                android:height="@dimen/textview_height"
+                android:text="Done" />
+
+            <LinearLayout
+                android:id="@+id/ll_done_inside"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <!--Keep height wrap content to show all items in recycler view.
+                           This will properly align the 'Add new' row below recycler view -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_done_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

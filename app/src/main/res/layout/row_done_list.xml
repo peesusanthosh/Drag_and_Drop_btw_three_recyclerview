@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_done_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/row_ll_height"
+    android:orientation="vertical"
+    android:padding="@dimen/row_ll_padding">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_done_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/row_rl_text_marign_end"
+            android:layout_marginStart="@dimen/common_row_maring_start_top"
+            android:layout_marginTop="@dimen/common_row_maring_start_top"
+            android:text="Air Handling Unit" />
+
+        <TextView
+            android:id="@+id/tv_done_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_done_title_name"
+            android:layout_marginBottom="@dimen/circle_img_margin_botton"
+            android:layout_marginEnd="@dimen/row_rl_content_text_margin_end"
+            android:layout_marginStart="@dimen/row_rl_content_text_margin_start"
+            android:text="Check drain pans and condensate piping to ensure they are free of obstacles" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

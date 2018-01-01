@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_linearlayour_marginbotton">40dp</dimen>
+    <dimen name="common_linearlayour_marginend">40dp</dimen>
+    <dimen name="common_linearlayour_marginstart">40dp</dimen>
+
+    <dimen name="ll_margin_top">20dp</dimen>
+    <dimen name="to_do_marigin_start">10dp</dimen>
+    <dimen name="textview_height">50dp</dimen>
+    //row layouts
+    <dimen name="row_ll_height">162dp</dimen>
+    <dimen name="row_ll_padding">10dp</dimen>
+    <dimen name="row_rl_text_marign_end">10dp</dimen>
+    <dimen name="common_row_maring_start_top">35dp</dimen>
+    <dimen name="row_rl_content_text_margin_end">44dp</dimen>
+    <dimen name="row_rl_content_text_margin_start">35dp</dimen>
+    <dimen name="circle_img_width_height">45dp</dimen>
+    <dimen name="circle_img_margin_botton">15dp</dimen>
+    <dimen name="row_button_width">120dp</dimen>
+    <dimen name="row_button_heigh">45dp</dimen>
+    <dimen name="circle_img_margin_top">5dp</dimen>
+
+</resources>
