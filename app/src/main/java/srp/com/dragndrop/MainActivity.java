@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
@@ -63,9 +64,9 @@ public class MainActivity extends AppCompatActivity {
         inProgressList.add(new ListItems("WIP 1", "working on it"));
         inProgressList.add(new ListItems("WIP 2", "working on it as well"));
 
-        donelist.add(new ListItems("Air 1", "Check drain pans and condensate piping to ensure they are free of obstacles"));
-        donelist.add(new ListItems("Air 2", "Check drain pans and condensate piping to ensure they are free of obstacles"));
-        donelist.add(new ListItems("Air 3", "Check drain pans and condensate piping to ensure they are free of obstacles"));
+        donelist.add(new ListItems("Air 1", "Done Task"));
+        donelist.add(new ListItems("Air 2", "Done Task"));
+        donelist.add(new ListItems("Air 3", "Done Task"));
 
         toDoAdapter = new ToDoAdapter(toDoList);
         doneAdapter = new DoneAdapter(donelist);
@@ -92,6 +93,19 @@ public class MainActivity extends AppCompatActivity {
         llToDoInside.setOnDragListener(emptyLayoutDragAndDropListener);
         llInProgressInside.setOnDragListener(emptyLayoutDragAndDropListener);
         llDoneInside.setOnDragListener(emptyLayoutDragAndDropListener);
+
+        ItemTouchHelper.Callback doneCallback = new SwipeDelete(doneAdapter);
+        ItemTouchHelper doneItemTouchHelper = new ItemTouchHelper(doneCallback);
+        doneItemTouchHelper.attachToRecyclerView(rvDoneList);
+
+        ItemTouchHelper.Callback todoCallback = new SwipeDelete(toDoAdapter);
+        ItemTouchHelper todoItemTouchHelper = new ItemTouchHelper(todoCallback);
+        todoItemTouchHelper.attachToRecyclerView(rvTodoList);
+
+        ItemTouchHelper.Callback inprogressCallback = new SwipeDelete(inProgressAdapter);
+        ItemTouchHelper inprogressItemTouchHelper = new ItemTouchHelper(inprogressCallback);
+        inprogressItemTouchHelper.attachToRecyclerView(rvInProgressList);
+
 
     }
 
@@ -172,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
 //            return true;
         }
     };
+
 
 
     /**

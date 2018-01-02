@@ -99,4 +99,12 @@ public class DoneAdapter extends RecyclerView.Adapter<DoneAdapter.DoneViewHolder
         public void onClick(View v) {
         }
     }
+
+    //remove item from list
+    public void dismiss(int pos){
+        if(pos !=-1) {
+            taskDetailsArrayList.remove(pos);
+            this.notifyItemRemoved(pos);
+        }
+    }
 }

@@ -2,6 +2,7 @@ package srp.com.dragndrop;
 
 import android.content.ClipData;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +30,6 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ToDoViewHolder
     public ToDoAdapter(ArrayList<ListItems> taskDetailsArrayList) {
         this.taskDetailsArrayList = taskDetailsArrayList;
     }
-
 
 
     @Override
@@ -97,6 +97,15 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ToDoViewHolder
         @Override
         public void onClick(View v) {
 
+        }
+    }
+
+    //remove item from list
+    public void dismiss(int pos) {
+        Log.d("demo",pos+" pos");
+        if(pos !=-1) {
+            taskDetailsArrayList.remove(pos);
+            this.notifyItemRemoved(pos);
         }
     }
 }

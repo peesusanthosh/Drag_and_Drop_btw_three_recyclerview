@@ -100,5 +100,12 @@ public class InProgressAdapter extends RecyclerView.Adapter<InProgressAdapter.In
 
         }
     }
+    //remove item from list
+    public void dismiss(int pos){
+        if(pos !=-1) {
+            taskDetailsArrayList.remove(pos);
+            this.notifyItemRemoved(pos);
+        }
+    }
 }
 
